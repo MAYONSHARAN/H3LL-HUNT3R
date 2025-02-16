@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H3LL HUNT3R - Official Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: white;
+            text-align: center;
+        }
+        header {
+            background-color: #222;
+            padding: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            padding: 50px;
+            border-bottom: 2px solid #444;
+        }
+        footer {
+            background-color: #222;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        #socials ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        #socials ul li a {
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        #socials ul li a img {
+            width: 32px;
+            height: 32px;
+            display: block;
+            margin: 0 auto;
+        }
+        #contact {
+            text-align: left;
+        }
+        #contact h2 {
+          text-align: center;
+        }
+        .album {
+            margin: 20px 0;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #666;
+        }
+        .album img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .album ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin: 10px;
+        }
+        .album ul li a {
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: underline;
+            text-align: left;
+            margin: 10px;
+        }
+        .album h3 a {
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const albumsDiv = document.getElementById("albums");
+            const albums = [
+                { title: "ACHIVEMENT?", image: "achivement.jpg",
+                  link: "https://open.spotify.com/album/4UTqEc0Uu4oStPgWBHMq5h?si=I5ltsTgSTB29-nLE-17guQ",
+                  songs: ["ACHIVEMEN(Original Track) ", "ACHIVEMENT? (Slowed + Reverb) ", "ACHIVEMENT? (Fast) ", "ACHIVEMENT? (Ultra Slowed)"],
+                },{
+                  title: "ENEMY?",
+                  image: "enemy.jpg",
+                  link: "coming.html",
+                  songs: ["ENEMY? (Original Track)", "ENEMY? (Slowed + Reverb)", "ENEMY? (Fast)", "ENEMY? (Ultra Slowed"]
+                }
+            ];
+            
+            albums.forEach(album => {
+                let albumSection = document.createElement("div");
+                albumSection.classList.add("album");
+                albumSection.innerHTML = ` <img src="${album.image}" alt="${album.title}"><h3><a href="${album.link}">${album.title}</a></h3><ul>` + album.songs.map(song => `<li><a href="#">${song}</a></li>`).join("") + "</ul>";
+                albumsDiv.appendChild(albumSection);
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>H3LL HUNT3R</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#socials">Socials</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h2>Welcome to the Official Website</h2>
+        <p>Discover the latest music and updates.</p>
+        <p>The official music website of H3LL HUNT3R and his songs.
+
+H3LL HUNT3R is a music dealer from Indian. Thats all, thanks for reading (bruh, yeah I texted this by myself). Btw hit the follow buttons on my socials, for a cookie :)</p>
+    </section>
+    
+    <section id="music">
+        <div id="albums">
+            <!-- Albums and songs will be dynamically added -->
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:mayonsharan@gmail.com" style="color:#ffffff; font-weight:bold; text-decoration:underline;">mayonsharan@gmail.com</a></p>
+        <p>LABEL: RUSH RECORDS</p>
+        <p>DISTRIBUTING PARTNER: RouteNote</p>
+        <p>Name: Mayon Sharan Singh</p>
+    </section>
+    
+    <section id="socials">
+        <h2>Follow Me</h2>
+        <ul>
+            <li><a href="https://youtube.com/@h3llhunt3r.official?si=WP8EQxqnRaF4sftq" target="_blank"><img src="youtube.png" alt="YouTube">YouTube</a></li>
+            <li><a href="https://www.instagram.com/itzz_mayon/?igsh=MTZ4bzJkM295ZndsZQ%3D%3D" target="_blank"><img src="instagram.png" alt="Instagram">Instagram</a></li>
+            <li><a href="https://x.com/Mayon_Sharan?t=btg1slrGyJCLUZ6HyrRM9g&s=09" target="_blank"><img src="x.png" alt="X">X</a></li>
+            <li><a href="https://open.spotify.com/artist/277KVFGvzortKMO9xBHH8q?si=l9d-jUOAQZa9_tHeDxrrfA" target="_blank"><img src="spotify.png" alt="Spotify">Spotify</a></li>
+            <li><a href="https://www.threads.net/@itzz_mayon" target="_blank"><img src="threads.png" alt="Threads">Threads</a></li>
+        </ul>
+    </section>
+    <br>
+    
+    <footer>
+        <p>&copy; 2025 H3LL HUNT3R. All Rights Reserved.</p>
+    </footer>
+    
+    
+</body>
+</html>
